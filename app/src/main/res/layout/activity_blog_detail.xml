@@ -1,0 +1,189 @@
+<!-- res/layout/activity_image_detail.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- Header with Back and Account Circle Buttons -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/_829870_arrow_back_left_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/black"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/main"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Account Circle Button -->
+        <ImageView
+            android:id="@+id/accountCircleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/logo" />
+
+    </RelativeLayout>
+
+    <!-- Blog Image -->
+
+    <!-- Title, Date, and Description -->
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_alignParentBottom="true"
+     >
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_marginTop="70dp"
+
+         >
+
+         <ImageView
+             android:id="@+id/blogImageView"
+             android:layout_width="250dp"
+             android:layout_height="200dp"
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="10dp"
+             android:layout_marginEnd="132dp"
+             android:scaleType="centerCrop"
+             android:src="@drawable/image_placeholder" />
+
+         <TextView
+             android:id="@+id/titleTextView"
+             android:layout_width="350dp"
+             android:layout_height="50dp"
+             android:layout_below="@id/blogImageView"
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="10dp"
+             android:layout_marginEnd="20dp"
+             android:background="@drawable/edit_text_background"
+             android:gravity="center"
+             android:text="Post Title"
+             android:textColor="@color/white"
+             android:textSize="20sp" />
+
+         <TextView
+             android:id="@+id/dateTextView"
+             android:layout_width="350dp"
+             android:layout_height="50dp"
+             android:layout_below="@id/titleTextView"
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="23dp"
+             android:layout_marginEnd="20dp"
+             android:background="@drawable/edit_text_background"
+             android:gravity="center"
+             android:text="Post Date"
+             android:textColor="@color/white"
+             android:textSize="14sp" />
+
+         <!-- Edit and Delete Buttons -->
+
+         <!-- Like Button and Likes Count -->
+
+         <TextView
+             android:id="@+id/descriptionView"
+             android:layout_width="350dp"
+             android:layout_height="200dp"
+             android:layout_below="@id/dateTextView"
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="23dp"
+             android:layout_marginEnd="56dp"
+             android:background="@drawable/edit_text_background"
+             android:gravity="center"
+             android:text="Post Description"
+             android:textColor="@color/white"
+             android:textSize="16sp" />
+
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/descriptionView"
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="2dp"
+             android:layout_marginEnd="10dp"
+             android:gravity="center"
+             android:orientation="horizontal">
+
+             <ImageView
+                 android:id="@+id/edit_Button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="2dp"
+                 android:background="@drawable/custom_button"
+                 android:clickable="true"
+                 android:focusable="true"
+                 android:padding="10dp"
+                 android:src="@drawable/edit_icon" />
+
+             <ImageView
+                 android:id="@+id/delete_Button"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="2dp"
+                 android:background="@drawable/custom_button"
+                 android:clickable="true"
+                 android:focusable="true"
+                 android:padding="10dp"
+                 android:src="@drawable/delete_icon" />
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="50dp"
+             android:layout_alignBottom="@+id/blogImageView"
+             android:layout_alignParentEnd="true"
+             android:layout_marginEnd="25dp"
+             android:layout_marginBottom="2dp"
+             android:orientation="horizontal">
+
+             <ImageView
+                 android:id="@+id/like_Button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:background="@drawable/custom_button"
+                 android:clickable="true"
+                 android:focusable="true"
+                 android:padding="10dp"
+                 android:src="@drawable/like_icon" />
+
+
+         </LinearLayout>
+     </RelativeLayout>
+ </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="unlabeled"/>
+
+</RelativeLayout>

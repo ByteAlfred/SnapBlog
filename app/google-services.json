@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "209466083423",
+    "project_id": "snapblog-1b9c1",
+    "storage_bucket": "snapblog-1b9c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209466083423:android:4e81706573630ed09473ea",
+        "android_client_info": {
+          "package_name": "com.example.snapblog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiJ-GzhyoWXNPCVgJ1a8j4Pat0a9nggA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

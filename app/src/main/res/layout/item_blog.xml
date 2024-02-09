@@ -1,0 +1,47 @@
+<!-- res/layout/item_blog.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/edit_text_background"
+    android:layout_margin="15dp"
+    >
+
+    <ImageView
+        android:id="@+id/blogImageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_vector_add_photo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/blogImageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/titleTextView"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

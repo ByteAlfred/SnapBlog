@@ -1,0 +1,137 @@
+<!-- activity_add_blog.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".AddBlog">
+
+    <!-- Header with Back Button -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/_829870_arrow_back_left_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Add Blog Title -->
+        <TextView
+            android:id="@+id/textViewAddBlogTitle"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/backButton"
+            android:background="@drawable/textbars"
+            android:text="Add Blog"
+            android:textColor="@color/main"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewBlogImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/header"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="51dp"
+        android:background="@drawable/edit_text_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder" />
+
+    <EditText
+        android:id="@+id/editTextBlogTitle"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/imageViewBlogImage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="29dp"
+        android:background="@drawable/edit_text_background"
+        android:gravity="center"
+        android:hint="Enter Blog Title"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/editTextEditPost"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/editTextBlogTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/edit_text_background"
+        android:gravity="start|top"
+        android:hint="Edit Post (max 500 words)"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/editTextDatePicker"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEditPost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_background"
+        android:gravity="center"
+        android:hint="Set Date"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:focusable="true"
+        android:clickable="true"/>
+
+    <!-- Publish Button -->
+    <Button
+        android:id="@+id/buttonPublish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDatePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:text="Publish"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="unlabeled"/>
+
+</RelativeLayout>

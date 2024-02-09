@@ -1,0 +1,23 @@
+<!-- bottom_navigation_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/icons8_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/_11817_search_strong_icon"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/_201370_add_plus_button_ui_new_icon"
+        android:title="Add" />
+
+    <item
+        android:id="@+id/menu_account"
+        android:icon="@drawable/account_icon"
+        android:title="Account" />
+</menu>
